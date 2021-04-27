@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  /* background-image: url(./img/Airway.jpeg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+#plane {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  opacity: 0.5;
+  animation: flyplane 20s 4s linear infinite both;
+}
+.plane-panel {
+  animation: hop 4s 10s linear alternate 3;
+}
+#dove {
+  width: 90px;
+  position: absolute;
+  top: 250px;
+  opacity: 0.8;
+  animation: move 25s 3s linear infinite both;
+}
+.dove-wing {
+  animation: dive 0.5s alternate infinite linear;
+}
+#molumen {
+  width: 90px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  animation: flymolumen 25s 3s linear infinite both;
+}
+.molumen-body {
+  animation: dive 0.5s alternate infinite linear;
+}
+.flying-fish {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  opacity: 0.3;
+  left: 0;
+  animation: swim 25s infinite linear both;
+}
+.flying-fish-body {
+  animation: twirl 0.5s infinite alternate;
+}
+
+/* ANIMATION */
+@keyframes flyplane {
+  from {
+    transform: translateX(1200px);
+  }
+  to {
+    transform: translateX(-1200px);
+  }
+}
+@keyframes hop {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}
+@keyframes move {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 1300px;
+  }
+}
+@keyframes dive {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(40deg);
+  }
+}
+@keyframes flymolumen {
+  from {
+    transform: translateX(1050px);
+  }
+  to {
+    transform: translateX(-1300px);
+  }
+}
+@keyframes swim {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 1300px;
+  }
+}
+@keyframes twirl {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(30deg);
+  }
+}
